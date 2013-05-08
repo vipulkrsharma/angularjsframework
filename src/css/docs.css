@@ -17,7 +17,9 @@ section > .lead {
 }
 section  ul li {
     list-style-type: none;
-    margin-bottom: 5px;
+    border-top: 1px solid #eeeeee;
+    padding: 15px;
+    color: black;
 }
 
 section ul li a:hover {
