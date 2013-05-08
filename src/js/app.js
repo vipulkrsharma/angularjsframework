@@ -11,6 +11,15 @@
                 }
             })
         }, 100);
-    })
+    });
+
+
+    $(document).on('click','.bs-docs-sidenav li',function() {
+        console.log("in here");
+        $('.bs-docs-sidenav li').each(function(e) {
+            $(this).removeClass('active');
+        });
+        $(this).addClass('active');
+    });
 
 }(window.jQuery);
