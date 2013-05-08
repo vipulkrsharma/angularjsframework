@@ -65,4 +65,5 @@ function articleBlogCtrl($scope) {
 		name : ".http://www.adobe.com/devnet/html5/articles/angularjs-directives-and-the-computer-science-of-javascript.html",
 		info : "AngularJS directives and the computer science of JavaScript"
 	}];
+
 };

@@ -1,0 +1,50 @@
+<div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="navbar-inner">
+        <div class="container">
+            <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="brand" href="./index.html">AngularJs Framework</a>
+            <div class="nav-collapse collapse">
+                <ul class="nav">
+                    <li class="">
+                        <a href="./index.html">Home</a>
+                    </li>
+                    <li class="">
+                        <a href="./learnangularjs">Learn AngularJs</a>
+                    </li>
+                    <li class="">
+                        <a href="/modulesangularjs">Modules AngularJs</a>
+                    </li>
+                    <li class="">
+                        <a href="/articlesangularjs">Articles AngularJs</a>
+                    </li>
+                    <li class="">
+                        <a href="/examplesangularjs">Examples AngularJs</a>
+                    </li>
+                    <li class="">
+                        <a href="/stackoverflowangularjs">Stackoverflow Questions</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <section id="modulesAngular">
+        <div class="page-header" ng-controller="modulesCtrl">
+            <h1>Angular Modules</h1>
+            <ul>
+                <li ng-repeat="data in modulesData">
+                    <div>
+                        {{data.description}}
+                    </div>
+                    <a href={{data.url}} target="_blank">{{data.url}}</a>
+
+                </li>
+            </ul>
+        </div>
+    </section>
+</div>

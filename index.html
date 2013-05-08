@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<html lang="en" ng-app>
+<html lang="en" ng-app="angularjsframework">
 	<head>
 		<title>AngularJs</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,6 +13,7 @@
 		<link href="./src/css/docs.css" rel="stylesheet">
         <!-- Scripts-->
 		<script type="text/javascript" src="./lib/angular/angular.js"></script>
+        <script type="text/javascript" src="./src/js/routes.js"></script>
         <script type="text/javascript" src="./src/js/modulesDataCtrl.js"></script>
         <script type="text/javascript" src="./src/js/learnAngularJsCtrl.js"></script>
 		<script type="text/javascript" src="./src/js/articleBlogCtrl.js"></script>
@@ -21,7 +22,6 @@
 
     </head>
 	<body data-spy="scroll" data-target=".bs-docs-sidebar">
-
 		<header class="jumbotron subhead">
 			<div class="container">
 				<h1>AngularJs</h1>
@@ -30,124 +30,25 @@
 				</p>
 			</div>
 		</header>
-		<div class="container">
 
-			<div class="row">
-				<div class="span3 bs-docs-sidebar">
-					<div class="scroller_anchor" style="height: 0px;"></div>
-					<div class="scroller" style="position: relative; top: 50px;">
-						<ul class="nav nav-list bs-docs-sidenav">
-							<li>
-								<a href="#learnAngular"> Learn AngularJs</a>
-							</li>
-							<li>
-								<a href="#modulesAngular"> Modules</a>
-							</li>
-							<li>
-								<a href="#articlesAngular"> Articles and Blogs</a>
-							</li>
-							<li>
-								<a href="#examplesAngular"> Examples and Fiddles</a>
-							</li>
-							<li>
-								<a href="#stackoverflowAngular"> Top Stackoverflow Questions</a>
-							</li>
-						</ul>
-					</div>
+        <div class="container">
+            <div ng-view></div>
+            <div id="disqus_thread"></div>
+            <script>
+                /*  CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE */
+                var disqus_shortname = 'angularjsframework'; // required: replace example with your forum shortname
 
-				</div>
-				<div class="span9">
+                /* * * DON'T EDIT BELOW THIS LINE * * */
+                (function() {
+                    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+                    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+                })();
+            </script>
+            <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 
-					<!-- learn AngularJs
-					================================================== -->
-					<section id="learnAngular">
-						<div class="page-header" ng-controller="articleBlogCtrl">
-							<h1>Learn AngularJs</h1>
-							<ul>
-								<li ng-repeat="link in links">
-									<div>
-										{{link.info}}
-									</div>
-									<a href={{link.name}} target="_blank">{{link.name}}</a>
 
-								</li>
-							</ul>
-						</div>
-
-					</section>
-
-					<!-- Modules
-					================================================== -->
-					<section id="modulesAngular">
-						<div class="page-header" ng-controller="modulesCtrl">
-							<h1>Angular Modules</h1>
-                            <ul>
-                                <li ng-repeat="data in modulesData">
-                                    <div>
-                                        {{data.description}}
-                                    </div>
-                                    <a href={{data.url}} target="_blank">{{data.url}}</a>
-
-                                </li>
-                            </ul>
-						</div>
-					</section>
-
-					<!-- Articles and Blogs
-					================================================== -->
-					<section id="articlesAngular" >
-						<div class="page-header" ng-controller="articleBlogCtrl">
-							<h1>Articles and Blogs</h1>
-							<ul>
-								<li ng-repeat="link in links">
-									<div>
-										{{link.info}}
-									</div>
-									<a href={{link.name}} target="_blank">{{link.name}}</a>
-
-								</li>
-							</ul>
-						</div>
-
-					</section>
-
-					<!-- Examples and Fiddles
-					================================================== -->
-					<section id="examplesAngular">
-						<div class="page-header" ng-controller="fiddleCtrl">
-							<h1>Examples and Fiddles</h1>
-							<ul>
-								<li ng-repeat="example in examples">
-									<div>
-										{{example.info}}
-									</div>
-									<a href={{link.name}} target="_blank">{{example.name}}</a>
-
-								</li>
-							</ul>
-						</div>
-					</section>
-
-					<!-- Buttons
-					================================================== -->
-					<section id="stackoverflowAngular">
-						<div class="page-header" ng-controller="stackoverflowCtrl">
-							<h1>Top Stackoverflow Questions</h1>
-                            <ul>
-                                <li ng-repeat="data in stackoverflowData">
-                                    <div>
-                                        {{data.title}}
-                                    </div>
-                                    <a href="http://www.stackoverflow.com/{{data.question_answers_url}}" target="_blank">www.stackoverflow.com/{{data.question_answers_url}}</a>
-
-                                </li>
-                            </ul>
-                        </div>
-					</section>
-
-				</div>
-			</div>
-		</div>
+        </div>
 
 		<!-- Footer
 		================================================== -->
