@@ -11,11 +11,13 @@
 		<link href="./lib/bootstrap/css/bootstrap.css" rel="stylesheet">
 		<link href="./lib/bootstrap/css/bootstrap-responsive.css" rel="stylesheet">
 		<link href="./src/css/docs.css" rel="stylesheet">
+        <!-- Scripts-->
 		<script type="text/javascript" src="./lib/angular/angular.js"></script>
-		<script type="text/javascript" src="./src/js/learnAngularJsCtrl.js"></script>
+        <script type="text/javascript" src="./src/js/modulesDataCtrl.js"></script>
+        <script type="text/javascript" src="./src/js/learnAngularJsCtrl.js"></script>
 		<script type="text/javascript" src="./src/js/articleBlogCtrl.js"></script>
         <script type="text/javascript" src="./src/js/stackoverflowcontroller.js"></script>
-
+        <script type="text/javascript" src="./src/js/fiddleCtrl.js"></script>
 
     </head>
 	<body data-spy="scroll" data-target=".bs-docs-sidebar">
@@ -59,7 +61,7 @@
 					<!-- learn AngularJs
 					================================================== -->
 					<section id="learnAngular">
-						<div class="page-header" ng-controller="linkCtrl">
+						<div class="page-header" ng-controller="articleBlogCtrl">
 							<h1>Learn AngularJs</h1>
 							<ul>
 								<li ng-repeat="link in links">
@@ -77,15 +79,24 @@
 					<!-- Modules
 					================================================== -->
 					<section id="modulesAngular">
-						<div class="page-header">
+						<div class="page-header" ng-controller="modulesCtrl">
 							<h1>Angular Modules</h1>
+                            <ul>
+                                <li ng-repeat="data in modulesData">
+                                    <div>
+                                        {{data.description}}
+                                    </div>
+                                    <a href={{data.url}} target="_blank">{{data.url}}</a>
+
+                                </li>
+                            </ul>
 						</div>
 					</section>
 
 					<!-- Articles and Blogs
 					================================================== -->
 					<section id="articlesAngular" >
-						<div class="page-header" ng-controller="LinkCtrl">
+						<div class="page-header" ng-controller="articleBlogCtrl">
 							<h1>Articles and Blogs</h1>
 							<ul>
 								<li ng-repeat="link in links">
@@ -103,7 +114,7 @@
 					<!-- Examples and Fiddles
 					================================================== -->
 					<section id="examplesAngular">
-						<div class="page-header" ng-controller="FiddleCtrl">
+						<div class="page-header" ng-controller="fiddleCtrl">
 							<h1>Examples and Fiddles</h1>
 							<ul>
 								<li ng-repeat="example in examples">
