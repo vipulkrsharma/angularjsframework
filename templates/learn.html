@@ -1,37 +1,4 @@
-<div class="navbar navbar-inverse navbar-fixed-top">
-    <div class="navbar-inner">
-        <div class="container">
-            <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <a class="brand" href="./index.html">AngularJs Framework</a>
-            <div class="nav-collapse collapse">
-                <ul class="nav">
-                    <li class="">
-                        <a href="./index.html">Home</a>
-                    </li>
-                    <li class="">
-                        <a href="./learnangularjs">Learn AngularJs</a>
-                    </li>
-                    <li class="">
-                        <a href="/modulesangularjs">Modules AngularJs</a>
-                    </li>
-                    <li class="">
-                        <a href="/articlesangularjs">Articles AngularJs</a>
-                    </li>
-                    <li class="">
-                        <a href="/examplesangularjs">Examples AngularJs</a>
-                    </li>
-                    <li class="">
-                        <a href="/stackoverflowangularjs">Stackoverflow Questions</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </div>
-</div>
+<div ng:include src="'/templates/navbar.html'"></div>
 <div class="row">
     <section id="learnAngular">
         <div class="page-header" ng-controller="linkCtrl">
@@ -47,4 +14,17 @@
             </ul>
         </div>
     </section>
+    <!--<div id="disqus_thread"></div>-->
+    <!--<script type="text/javascript">-->
+        <!--/* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */-->
+        <!--var disqus_shortname = 'learnangular'; // required: replace example with your forum shortname-->
+
+        <!--/* * * DON'T EDIT BELOW THIS LINE * * */-->
+        <!--(function() {-->
+            <!--var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;-->
+            <!--dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';-->
+            <!--(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);-->
+        <!--})();-->
+    <!--</script>-->
+    <!--<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>-->
 </div>

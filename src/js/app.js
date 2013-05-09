@@ -31,7 +31,7 @@ function scrollTo(id) {
 }
 function findPos(obj) {
     var curtop = 0;
-    if (obj.offsetParent) {
+    if (obj && obj.offsetParent) {
         do {
             curtop += obj.offsetTop;
         } while (obj = obj.offsetParent);
