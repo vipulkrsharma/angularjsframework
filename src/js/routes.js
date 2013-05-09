@@ -1,5 +1,5 @@
 var app = angular.module('angularjsframework',[]).config(function($routeProvider, $locationProvider) {
-   // $locationProvider.html5Mode(true);
+    $locationProvider.html5Mode(true);
     $routeProvider.
         when('/',{templateUrl: './templates/main.html'}).
         when('/learnangularjs', {templateUrl: './templates/learn.html', controller : linkCtrl}).
