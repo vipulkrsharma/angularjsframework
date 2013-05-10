@@ -870,3 +870,13 @@ form.bs-docs-example {
         padding-bottom: 20px;
     }
 }
+
+#stackoverflowAngular ul li div span,#modulesAngular ul li div span {
+    background-color: #eeeeee;
+    float: right;
+}
+
+section .search {
+    float: right;
+    margin-top: 10px;
+}

@@ -1,5 +1,5 @@
 function articleBlogCtrl($scope) {
-	$scope.links = [{
+	$scope.articles = [{
 		name : " http://blog.appfog.com/angularjs-the-beauty-of-concision/",
 		info : "AngularJS: the beauty of concision"
 	}, {

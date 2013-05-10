@@ -1,15 +1,25 @@
 <div ng:include src="'/templates/navbar.html'"></div>
 <div class="row">
     <section id="stackoverflowAngular">
-        <div class="page-header" ng-controller="stackoverflowCtrl">
-            <h1>Top Stackoverflow Questions</h1>
+        <div class="page-header">
+            <div class="row">
+                <div class="span6">
+                    <h1>Top Stackoverflow Questions</h1>
+                </div>
+                <div>
+                    <input placeholder="Search..." ng-model="searchStack" class="search">
+                </div>
+            </div>
             <ul>
-                <li ng-repeat="data in stackoverflowData">
+                <li ng-repeat="data in stackoverflowData | filter:searchStack">
                     <div>
                         {{data.title}}
+                        <span>Up Votes: {{data.up_vote_count}}</span>
                     </div>
-                    <a href="http://www.stackoverflow.com/{{data.question_answers_url}}" target="_blank">www.stackoverflow.com/{{data.question_answers_url}}</a>
-
+                    <div>
+                        <a href="http://www.stackoverflow.com/{{data.question_answers_url}}" target="_blank">www.stackoverflow.com/{{data.question_answers_url}}</a>
+                        <span>Favourite Count : {{data.favorite_count}}</span>
+                    </div>
                 </li>
             </ul>
         </div>

@@ -1,5 +1,5 @@
 function linkCtrl($scope) {
-    $scope.links = [{
+    $scope.learn = [{
         "name" : 'http://angularjs.org/',
         'info' : 'The Official Learning Site'
     }, {

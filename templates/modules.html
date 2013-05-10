@@ -1,15 +1,25 @@
 <div ng:include src="'/templates/navbar.html'"></div>
 <div class="row">
     <section id="modulesAngular">
-        <div class="page-header" ng-controller="modulesCtrl">
-            <h1>Angular Modules</h1>
+        <div class="page-header">
+            <div class="row">
+                <div class="span6">
+                    <h1>Angular Modules</h1>
+                </div>
+                <div>
+                    <input placeholder="Search..." ng-model="searchModules" class="search">
+                </div>
+            </div>
             <ul>
-                <li ng-repeat="data in modulesData">
+                <li ng-repeat="data in modulesData | filter: searchModules">
                     <div>
                         {{data.description}}
+                        <span>Forks : {{data.forks}}</span>
                     </div>
-                    <a href={{data.url}} target="_blank">{{data.url}}</a>
-
+                    <div>
+                        <a href={{data.url}} target="_blank">{{data.url}}</a>
+                        <span>Followers : {{data.followers}}</span>
+                    </div>
                 </li>
             </ul>
         </div>

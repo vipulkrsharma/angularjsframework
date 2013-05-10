@@ -1,14 +1,21 @@
 <div ng:include src="'/templates/navbar.html'"></div>
 <div class="row">
     <section id="articlesAngular" >
-        <div class="page-header" ng-controller="articleBlogCtrl">
-            <h1>Articles and Blogs</h1>
+        <div class="page-header">
+            <div class="row">
+                <div class="span6">
+                    <h1>Articles and Blogs</h1>
+                </div>
+                <div>
+                    <input placeholder="Search..." ng-model="searchArticles" class="search">
+                </div>
+            </div>
             <ul>
-                <li ng-repeat="link in links">
+                <li ng-repeat="article in articles | filter:searchArticles">
                     <div>
-                        {{link.info}}
+                        {{article.info}}
                     </div>
-                    <a href={{link.name}} target="_blank">{{link.name}}</a>
+                    <a href={{article.name}} target="_blank">{{article.name}}</a>
 
                 </li>
             </ul>

@@ -1,4 +1,8 @@
 <div class="row">
+    <input placeholder="Search..." ng-model="search" class="pull-right">
+</div>
+
+<div class="row">
     <div class="span3 bs-docs-sidebar">
         <div class="scroller_anchor" style="height: 0px;"></div>
         <div class="scroller" style="position: relative; top: 50px;">
@@ -20,7 +24,6 @@
                 </li>
             </ul>
         </div>
-
     </div>
     <div class="span9">
 
@@ -30,7 +33,7 @@
             <div class="page-header" ng-controller="linkCtrl">
                 <h1>Learn AngularJs</h1>
                 <ul>
-                    <li ng-repeat="link in links.slice(0,10)">
+                    <li ng-repeat="link in learn.slice(0,10) | filter:search">
                         <div>
                             {{link.info}}
                         </div>
@@ -48,12 +51,15 @@
             <div class="page-header" ng-controller="modulesCtrl">
                 <h1>Angular Modules</h1>
                 <ul>
-                    <li ng-repeat="data in modulesData.slice(0,10)">
+                    <li ng-repeat="data in modulesData.slice(0,10)| filter:search">
                         <div>
                             {{data.description}}
+                            <span>Forks : {{data.forks}}</span>
                         </div>
-                        <a href={{data.url}} target="_blank">{{data.url}}</a>
-
+                        <div>
+                            <a href={{data.url}} target="_blank">{{data.url}}</a>
+                            <span>Followers : {{data.followers}}</span>
+                        </div>
                     </li>
                 </ul>
                 <a href="/modulesangularjs" class="pull-right">More...</a>
@@ -66,11 +72,11 @@
             <div class="page-header" ng-controller="articleBlogCtrl">
                 <h1>Articles and Blogs</h1>
                 <ul>
-                    <li ng-repeat="link in links.slice(0,10)">
+                    <li ng-repeat="article in articles.slice(0,10)| filter:search">
                         <div>
-                            {{link.info}}
+                            {{article.info}}
                         </div>
-                        <a href={{link.name}} target="_blank">{{link.name}}</a>
+                        <a href={{article.name}} target="_blank">{{article.name}}</a>
 
                     </li>
                 </ul>
@@ -85,7 +91,7 @@
             <div class="page-header" ng-controller="fiddleCtrl">
                 <h1>Examples and Fiddles</h1>
                 <ul>
-                    <li ng-repeat="example in examples.slice(0,10)">
+                    <li ng-repeat="example in examples.slice(0,10) | filter:search">
                         <div>
                             {{example.info}}
                         </div>
@@ -103,12 +109,15 @@
             <div class="page-header" ng-controller="stackoverflowCtrl">
                 <h1>Top Stackoverflow Questions</h1>
                 <ul>
-                    <li ng-repeat="data in stackoverflowData.slice(0,10)">
+                    <li ng-repeat="data in stackoverflowData.slice(0,10) | filter:search">
                         <div>
                             {{data.title}}
+                            <span>Up Votes: {{data.up_vote_count}}</span>
                         </div>
-                        <a href="http://www.stackoverflow.com/{{data.question_answers_url}}" target="_blank">www.stackoverflow.com/{{data.question_answers_url}}</a>
-
+                        <div>
+                            <a href="http://www.stackoverflow.com/{{data.question_answers_url}}" target="_blank">www.stackoverflow.com/{{data.question_answers_url}}</a>
+                            <span>Favourite Count : {{data.favorite_count}}</span>
+                        </div>
                     </li>
                 </ul>
                 <a href="/stackoverflowangularjs" class="pull-right">More...</a>
