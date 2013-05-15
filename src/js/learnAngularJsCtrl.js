@@ -9,9 +9,6 @@ function linkCtrl($scope) {
         "name" : "https://www.youtube.com/watch?v=8ILQOFAgaXE",
         "info": "Video: Introduction to AngularJs"
     }, {
-        "name" : "http://www.youtube.com/playlist?list=PLP6DbQBkn9ymGQh2qpk9ImLHdSH5T7yw7",
-        'info': "Videos by John Lindquist"
-    }, {
         "name" : "http://www.egghead.io/",
         'info': "John Lindquist's site"
     }, {

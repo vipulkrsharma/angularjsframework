@@ -13,6 +13,9 @@ function articleBlogCtrl($scope) {
 		info : "Fun with AngularJS!"
 
 	}, {
+        name : "http://deansofer.com/posts/view/14/AngularJs-Tips-and-Tricks-UPDATED"
+        info : "Cool tips and tricks for Angular Js."
+    }, {
 		name : "http://beust.com/weblog/2012/12/29/migrating-from-ember-js-to-angularjs",
 		info : "Migrating from Ember.js to AngularJS"
 	}, {
@@ -62,7 +65,7 @@ function articleBlogCtrl($scope) {
 		name : "http://www.bennadel.com/blog/2472-HashKeyCopier-An-AngularJS-Utility-Class-For-Merging-Cached-And-Live-Data.htm",
 		info : "An AngularJS Utility Class For Merging Cached And Live Data"
 	}, {
-		name : ".http://www.adobe.com/devnet/html5/articles/angularjs-directives-and-the-computer-science-of-javascript.html",
+		name : "http://www.adobe.com/devnet/html5/articles/angularjs-directives-and-the-computer-science-of-javascript.html",
 		info : "AngularJS directives and the computer science of JavaScript"
 	}];
 
